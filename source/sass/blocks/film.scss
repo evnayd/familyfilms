@@ -87,15 +87,17 @@
   color: $text-color;
   margin-bottom: 0;
   cursor: pointer;
-  margin-top: 0px;
-  padding: 7px;
+  padding-bottom: 7px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 20px;
   border-radius: 8px;
-  margin-top: 20px;
+  transition: 0.2s ease-out;
 }
 
 .film__about:hover {
   background-color: $details-hover;
-  color: $main-color;
+  padding-left: 7px;
 }
 
 .film__about::before {
@@ -103,7 +105,7 @@
   position: absolute;
   width: 12px;
   height: 2px;
-  top: 15px;
+  top: 17px;
   right: 10px;
   background-color: $main-color;
 }
@@ -113,7 +115,7 @@
   position: absolute;
   width: 2px;
   height: 12px;
-  top: 10px;
+  top: 12px;
   right: 15px;
   background-color: $main-color;
 }
