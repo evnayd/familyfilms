@@ -1,0 +1,73 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  word-wrap: break-word;
+  font-family: $main-font;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
+}
+
+.active {
+  display: block;
+}
+
+.back-to-top-button {
+  display: none;
+  position: fixed;
+  bottom: 5px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-image: url("../img/button.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 55px;
+  width: 55px;
+  transform: rotateY(0deg) rotate(-90deg);
+  opacity: 80%;
+  background-color: $main-color;
+  border-radius: 4px;
+
+  @media only screen and (min-width: $desktop-width) {
+    left: 60px;
+    bottom: 15px;
+  }
+}
+
+.back-to-top-button:hover {
+  opacity: 100%;
+}

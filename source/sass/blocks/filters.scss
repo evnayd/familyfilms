@@ -1,0 +1,126 @@
+.filters__title {
+  @include text();
+  line-height: 14px;
+  padding: 10px 10px 10px 10px;
+  background-color: $main-color;
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  width: 150px;
+  margin-left: 1%;
+  margin-top: 25px;
+  position: relative;
+
+  @media only screen and (min-width: $tablet-width) {
+    width: 20%;
+  }
+  @media only screen and (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.filters__popup {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  position: absolute;
+  top: 50px;
+  z-index: 130;
+  background-color: white;
+  border: 1px solid $main-color;
+  width: 90%;
+  margin-left: -1%;
+  border-radius: 6px;
+
+  @media only screen and (min-width: $tablet-width) {
+    width: 50%;
+    margin-left: 1%;
+  }
+
+  @media only screen and (min-width: $desktop-width) {
+    display: block;
+    width: 20%;
+    left: 0;
+    top: -60px;
+    margin-top: 15px;
+    border: none;
+  }
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  outline: 0;
+}
+
+.toggle {
+  display: inline-block;
+  position: relative;
+  margin-right: 15px;
+  margin-left: 0;
+  margin-bottom: 0;
+  outline: none;
+  width: 22px;
+  height: 22px;
+  background-color: #f2f2f2;
+  border-radius: 40px;
+}
+
+.toggle:checked {
+  background-color: $main-color;
+  transition: all linear 0.3s;
+}
+
+.toggle:checked::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  left: 7px;
+  top: 7px;
+  border-radius: 50%;
+  background: $text-color;
+  transition: all 0.2s cubic-bezier(0.5, 0.1, 0.75, 1.35);
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.filter__name {
+  margin: 0;
+}
+
+.filters__btn {
+  background-color: rgba(31, 32, 32, 0.6);
+  border: none;
+  outline: none;
+  width: 30px;
+  height: 4px;
+  margin-bottom: 43px;
+  position: relative;
+  border-radius: 2px;
+  transform: rotateY(0deg) rotate(45deg);
+
+  @media only screen and (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.filters__btn::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(31, 32, 32, 0.6);
+  width: 30px;
+  height: 4px;
+  top: 0px;
+  left: 0px;
+  transform: rotateY(0deg) rotate(90deg);
+  transition: transform 0.5s;
+  border-radius: 2px;
+}

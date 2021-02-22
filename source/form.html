@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Family films</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__name">Movies</div>
+      <nav class="main-nav main-nav--closed">
+        <button
+          class="main-nav__toggle"
+          aria-label="Open the menu"
+          type="button"
+        ></button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="about.html">About</a>
+          </li>
+          <li class="site-list__item site-list__item--active">
+            <a href="index.html">Movies and cartoons</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">Your favorite movie</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="container container--form">
+      <div class="form-text">
+        <p>
+          Hey! If you have a favorite children's cartoon or movie, but you
+          didn't find it on my list, don't be discouraged. Perhaps I just
+          haven't heard of it yet.
+        </p>
+        <p>Just write about it in this form. It will be appreciated!</p>
+      </div>
+      <form class="form" action="https://formspree.io/f/myybvole" method="POST">
+        <div class="form__wrapper">
+          <label class="form__label">Your email: </label>
+          <input
+            class="form__input form__input--email"
+            type="email"
+            name="_replyto"
+            placeholder="hello@example.com"
+          />
+        </div>
+        <div class="form__wrapper">
+          <label class="form__label"> Your name: </label>
+          <input
+            class="form__input"
+            type="text"
+            name="name"
+            placeholder="Name"
+          />
+        </div>
+        <div class="form__wrapper">
+          <label class="form__label"> Your message: </label>
+          <textarea
+            class="form__input"
+            name="message"
+            placeholder="My favorite film is..."
+          ></textarea>
+        </div>
+        <div class="form__wrapper form__wrapper--btn">
+          <button class="form__btn" type="submit" id="send">Send</button>
+          <button class="form__btn" type="submit" id="clear">Clear</button>
+        </div>
+        <input type="hidden" name="_language" value="en" />
+      </form>
+    </main>
+    <script src="js/menu.js"></script>
+    <script src="js/form.js"></script>
+  </body>
+</html>

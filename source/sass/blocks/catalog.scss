@@ -1,0 +1,17 @@
+.catalog {
+  position: relative;
+  @media only screen and (min-width: $desktop-width) {
+    position: relative;
+  }
+}
+
+.catalog__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media only screen and (min-width: $desktop-width) {
+    margin-left: 20%;
+    position: relative;
+  }
+}

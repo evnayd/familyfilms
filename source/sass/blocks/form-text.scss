@@ -1,0 +1,32 @@
+.form-text {
+  font-size: 18px;
+  line-height: 20px;
+  text-align: left;
+  color: $text-color;
+  margin-bottom: 10px;
+  font-size: 18px;
+
+  @media only screen and (min-width: $desktop-width) {
+    max-width: 50%;
+    margin-bottom: 30px;
+    line-height: 22px;
+    position: relative;
+  }
+}
+
+.form-text::after {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  bottom: 10px;
+  left: 30px;
+}
+
+.form-text p {
+  @media only screen and (min-width: $desktop-width) {
+    margin-top: 0;
+  }
+}

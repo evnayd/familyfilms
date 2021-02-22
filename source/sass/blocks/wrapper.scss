@@ -1,0 +1,25 @@
+.wrapper {
+  display: flex;
+  padding-left: 14px;
+  padding-right: 14px;
+  z-index: 0;
+}
+
+.wrapper--header {
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.wrapper--film {
+  justify-content: space-between;
+  padding: 0;
+  margin-bottom: 20px;
+  width: 100%;
+
+  @media only screen and (min-width: $desktop-width) {
+    display: block;
+    width: auto;
+  }
+}

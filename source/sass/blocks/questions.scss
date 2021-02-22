@@ -1,0 +1,36 @@
+.questions__title {
+  background-color: $main-color;
+  padding: 15px;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s;
+  margin-bottom: 5px;
+  margin-top: 0;
+  width: 100%;
+  border-radius: 6px;
+  left: 0;
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 400;
+
+  @media only screen and (min-width: $desktop-width) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.questions__title:hover {
+  padding-left: 40px;
+  background-color: $details-color;
+}
+
+.questions__text {
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.questions__text a {
+  color: $main-color;
+}

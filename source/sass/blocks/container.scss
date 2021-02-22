@@ -1,0 +1,26 @@
+.container {
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+
+  @media only screen and (min-width: $tablet-width) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.container--form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+
+  @media only screen and (min-width: $tablet-width) {
+    padding-top: 40px;
+  }
+
+  @media only screen and (min-width: $desktop-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+  }
+}
