@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Family films</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__name">Movies</div>
+      <nav class="main-nav main-nav--closed">
+        <button
+          class="main-nav__toggle"
+          aria-label="Open the menu"
+          type="button"
+        ></button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a href="about.html">About</a>
+          </li>
+          <li class="site-list__item site-list__item--active">
+            <a href="#">Movies and cartoons</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Your favorite movie</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="slider">
+        <h2 class="hidden">Slider</h2>
+        <ul class="slider__list">
+          <li class="slider__item slider-item">
+            <div class="slider-item__qoute">
+              <p>
+                "Saruman believes it is only great power that can hold evil in
+                check, but that is not what I have found. I found it is the
+                small everyday deeds of ordinary folk that keep the darkness at
+                bay. Small acts of kindness and love"
+              </p>
+              <span>Lord of the Rings.</span>
+            </div>
+          </li>
+          <li class="slider__item slider-item">
+            <div class="slider-item__qoute">
+              <p>"Tomorrow is always fresh, with no mistakes in it."</p>
+              <span>Anne of Green Gables </span>
+            </div>
+          </li>
+          <li class="slider__item slider-item">
+            <div class="slider-item__qoute">
+              <p>"Try Laughing. Then Whatever Scares You Will Go Away."</p>
+              <span>My Neighbor Totoro</span>
+            </div>
+          </li>
+          <li class="slider__item slider-item">
+            <div class="slider-item__qoute">
+              <p>
+                "All grown-ups were once children, but only few of them remember
+                it."
+              </p>
+              <span>The Little Prince</span>
+            </div>
+          </li>
+        </ul>
+        <button
+          class="slider__btn"
+          aria-label="The next slider"
+          type="button"
+        ></button>
+      </section>
+      <section class="catalog container">
+        <div class="catalog__filters filters">
+          <h2 class="filters__title">Filters</h2>
+          <div class="filters__popup container hidden">
+            <button
+              class="filters__btn"
+              aria-label="Close the filters"
+              type="button"
+            ></button>
+            <ul class="filters__list">
+              <li class="filter">
+                <input
+                  name="choice"
+                  id="Movies"
+                  type="radio"
+                  class="toggle"
+                  onchange="window.filter.filterItems(event, 'movie')"
+                />
+                <p class="filter__name">Movies</p>
+                <p></p>
+              </li>
+
+              <li class="filter">
+                <input
+                  name="choice"
+                  id="Cartoons"
+                  type="radio"
+                  class="toggle"
+                  onchange="window.filter.filterItems(event, 'cartoon')"
+                />
+                <p class="filter__name">Cartoons</p>
+
+                <p></p>
+              </li>
+
+              <li class="filter">
+                <input
+                  name="choice"
+                  id="All"
+                  type="radio"
+                  class="toggle"
+                  onchange="window.filter.filterItems(event, 'film')"
+                  checked
+                />
+                <p class="filter__name">All</p>
+
+                <p></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <ul class="catalog__list">
+          <li class="film movie">
+            <div class="film__box">
+              <img
+                class="film__pic"
+                src="img/hobbit_a.jpg"
+                alt="Movie heroes"
+                width="300"
+                height="300"
+              />
+              <div class="film__container">
+                <h3 class="film__name">"The Hobbit: An Unexpected Journey"</h3>
+                <div class="wrapper wrapper--film">
+                  <p class="film__country">USA, New Zealand</p>
+                  <p class="film__year">2012</p>
+                </div>
+              </div>
+            </div>
+            <div class="film__more">
+              <h3 class="film__about">About</h3>
+              <p class="film__info hidden">
+                An Unexpected Journey tells the tale of Bilbo Baggins, who is
+                convinced by the wizard Gandalf to accompany thirteen Dwarves,
+                led by Thorin Oakenshield, on a quest to reclaim the Lonely
+                Mountain from the dragon Smaug.
+              </p>
+            </div>
+          </li>
+          <li class="film movie">
+            <div class="film__box">
+              <img
+                class="film__pic"
+                src="img/yellow_suitcase.jpg"
+                alt="Doctor"
+                width="300"
+                height="300"
+              />
+              <div class="film__container">
+                <h3 class="film__name">"Adventures of the Yellow Suitcase"</h3>
+                <div class="wrapper wrapper--film">
+                  <p class="film__country">USSR</p>
+                  <p class="film__year">1970</p>
+                </div>
+              </div>
+            </div>
+            <div class="film__more">
+              <h3 class="film__about">About</h3>
+              <p class="film__info hidden">
+                Classics of Soviet cinema for children. The boy Petya was so shy
+                that his mother decided to see a doctor. The magician-doctor has
+                an excellent medicine - "candy of real courage", but here's the
+                trouble: a suitcase with miracle medicines falls into the wrong
+                hands.
+              </p>
+            </div>
+          </li>
+
+          <li class="film movie">
+            <div class="film__box">
+              <img
+                class="film__pic"
+                src="img/ann.jpg"
+                alt="Anne"
+                width="300"
+                height="300"
+              />
+              <div class="film__container">
+                <h3 class="film__name">"Anne of Green Gables"</h3>
+                <div class="wrapper wrapper--film">
+                  <p class="film__country">Canada</p>
+                  <p class="film__year">1985</p>
+                </div>
+              </div>
+            </div>
+            <div class="film__more">
+              <h3 class="film__about">About</h3>
+              <p class="film__info hidden">
+                A screen adaptation of the famous novel by Canadian writer Lucy
+                Maud Montgomery. The story tells how an orphan girl, through a
+                misunderstanding, ends up on a farm where the lonely brother and
+                sister live. She changes their life and brings light to it.
+                Thanks to her character, Anne often finds herself in ridiculous
+                situations. But anyway she finds good friends among the
+                villagers and becomes the one of best students in her new
+                school.
+              </p>
+            </div>
+          </li>
+          <li class="film movie">
+            <div class="film__box">
+              <img
+                class="film__pic"
+                src="img/first_grader.jpg"
+                alt="Little girl"
+                width="300"
+                height="300"
+              />
+              <div class="film__container">
+                <h3 class="film__name">"First-Year Student"</h3>
+                <div class="wrapper wrapper--film">
+                  <p class="film__country">USSR</p>
+                  <p class="film__year">1948</p>
+                </div>
+              </div>
+            </div>
+            <div class="film__more">
+              <h3 class="film__about">About</h3>
+              <p class="film__info hidden">
+                Сlassics of Soviet cinema for children. Marusya Orlova became a
+                first grader. An interesting life full of events and experiences
+                began for her. From a proud and capricious girl under the
+                influence of a teacher and her new friends, she turns into a
+                disciplined, sociable and responsive student.
+              </p>
+            </div>
+          </li>
+          <li class="film movie">
+            <div class="film__box">
+              <img
+                class="film__pic"
+                src="img/paddington.jpg"
+                alt="Paddington bear"
+                width="300"
+                height="300"
+              />
+              <div class="film__container">
+                <h3 class="film__name">"Paddington"</h3>
+                <div class="wrapper wrapper--film">
+                  <p class="film__country">United Kingdom, France</p>
+                  <p class="film__year">2014</p>
+                </div>
+              </div>
+            </div>
+            <div class="film__more">
+              <h3 class="film__about">About</h3>
+              <p class="film__info hidden">
+                Story about a funny bear who comes to London from distant Peru
+                and finds himself alone on the street in an unfamiliar city. The
+                London family finds him on a Railway Station and he begins to
+                live with them. This is how the funny story of his adventures
+                begins. They call it Paddington, after the station where it was
+                found.
+              </p>
+            </div>
+          </li>
+          <li class="film movie">
+            <div class="film__box">
+              <img
+                class="film__pic"
+                src="img/belle_and_sebastian.jpg"
+                alt="Boy and dog"
+                width="300"
+                height="300"
+              />
+              <div class="film__container">
+                <h3 class="film__name">"Belle & Sebastian"</h3>
+                <div class="wrapper wrapper--film">
+                  <p class="film__country">Belgium</p>
+                  <p class="film__year">2013</p>
+                </div>
+              </div>
+            </div>
+            <div class="film__more">
+              <h3 class="film__about">About</h3>
+              <p class="film__info hidden">
+                In 1943, Sébastien is an orphan boy living with an adoptive
+                "grandfather". They live in the small village, whose inhabitants
+                secretly organize the passage of Jewish exiles into Switzerland.
+                The village is also plagued by a mysterious "Beast" who preys on
+                the flocks of the shepherds and the inhabitants. Sébastien met
+                the "Beast" and opened that it's a simple big dog. It's kind and
+                freindly and doesnt' kill the animals. Boy and dog became
+                freinds.
+              </p>
+            </div>
+          </li>
+          <li class="film cartoon">
+            <div class="film__box">
+              <img
+                class="film__pic"
+                src="img/prince.jpg"
+                alt="Little prince cartoon heroes"
+                width="300"
+                height="300"
+              />
+              <div class="film__container">
+                <h3 class="film__name">"Little prince"</h3>
+                <div class="wrapper wrapper--film">
+                  <p class="film__country">France, Italy</p>
+                  <p class="film__year">2017</p>
+                </div>
+              </div>
+            </div>
+            <div class="film__more">
+              <h3 class="film__about">About</h3>
+              <p class="film__info hidden">
+                In this cartoon, the plot of Exupery's famous book "The Little
+                Prince" is intertwined with the friendship story of a little
+                girl and her neighbor, an old aviator. The story tells that
+                there is always a place for a miracle in life and adults should
+                not deprive children of their childhood.
+              </p>
+            </div>
+          </li>
+          <li class="film movie">
+            <div class="film__box">
+              <img
+                class="film__pic"
+                src="img/сhoristes.jpg"
+                alt="School boys and teachers"
+                width="300"
+                height="300"
+              />
+              <div class="film__container">
+                <h3 class="film__name">"The Chorus"</h3>
+                <div class="wrapper wrapper--film">
+                  <p class="film__country">France</p>
+                  <p class="film__year">2004</p>
+                </div>
+              </div>
+            </div>
+            <div class="film__more">
+              <h3 class="film__about">About</h3>
+              <p class="film__info hidden">
+                The film tells about France in the period after the Second World
+                War. A new music teacher, Clement Mathieu, comes to the boarding
+                school for troubled teenagers. In a closed school, harsh rules
+                reign, which further embitter the boys. Monsieur Mathieu,
+                good-natured and gentle, tries to resist the current situation.
+                He organizes a school choir. And with this simple activity, he
+                manages to change a lot.
+              </p>
+            </div>
+          </li>
+          <li class="film movie">
+            <div class="film__box">
+              <img
+                class="film__pic"
+                src="img/kingdom.jpg"
+                alt="Two pioneer girls"
+                width="300"
+                height="300"
+              />
+              <div class="film__container">
+                <h3 class="film__name">"Kingdom of Crooked Mirrors"</h3>
+                <div class="wrapper wrapper--film">
+                  <p class="film__country">USSR</p>
+                  <p class="film__year">1963</p>
+                </div>
+              </div>
+            </div>
+            <div class="film__more">
+              <h3 class="film__about">About</h3>
+              <p class="film__info hidden">
+                The film centers around an encounter between a girl named Olya
+                and a mysterious counterpart, Yalo, while staring into a mirror.
+                The characters are exact opposites. In the story, Olya steps
+                through the mirror into the Kingdom of Crooked Mirrors where
+                Yalo resides. The kingdom produces crooked mirrors that
+                brainwash its people through subtle changes in reality. When
+                Yalo's friend is suddenly imprisoned for refusing to make
+                crooked mirrors by the evil leaders, Olya decides to accompany
+                Yalo to rescue him.
+              </p>
+            </div>
+          </li>
+          <li class="film movie">
+            <div class="film__box">
+              <img
+                class="film__pic"
+                src="img/little_women.jpg"
+                alt="4 sisters and mother"
+                width="300"
+                height="300"
+              />
+              <div class="film__container">
+                <h3 class="film__name">"Little women"</h3>
+                <div class="wrapper wrapper--film">
+                  <p class="film__country">USA</p>
+                  <p class="film__year">1994</p>
+                </div>
+              </div>
+            </div>
+            <div class="film__more">
+              <h3 class="film__about">About</h3>
+              <p class="film__info hidden">
+                The film is based on the famous novel by Louisa May Alcott. The
+                plot is based on the life of four sisters, who, despite all the
+                turmoil, maintain their friendship and love. The film shows the
+                beauty of love, friendship, hope, family values, patience and
+                the ability to enjoy life.
+              </p>
+            </div>
+          </li>
+          <li class="film cartoon">
+            <div class="film__box">
+              <img
+                class="film__pic"
+                src="img/lorax.jpg"
+                alt="Cartoon heroes"
+                width="300"
+                height="300"
+              />
+              <div class="film__container">
+                <h3 class="film__name">"The Lorax"</h3>
+                <div class="wrapper wrapper--film">
+                  <p class="film__country">USA</p>
+                  <p class="film__year">2012</p>
+                </div>
+              </div>
+            </div>
+            <div class="film__more">
+              <h3 class="film__about">About</h3>
+              <p class="film__info hidden">
+                The action takes place in the future, in one lovely town. There
+                is everything for life: beautiful houses, cars, shops, trees and
+                grass. Everything is made of plastic. People have forgotten that
+                there were real trees on the Earth. The truth is that people buy
+                air to breathe. But they are used to it. But one day one dreamy
+                girl suddenly told her friend that she would like to see a real
+                tree. This is how the whole story began.
+              </p>
+            </div>
+          </li>
+          <li class="film movie">
+            <div class="film__box">
+              <img
+                class="film__pic"
+                src="img/nicolas.jpg"
+                alt="Nicholas and family"
+                width="300"
+                height="300"
+              />
+              <div class="film__container">
+                <h3 class="film__name">"Little Nicholas"</h3>
+                <div class="wrapper wrapper--film">
+                  <p class="film__country">France, Belgium</p>
+                  <p class="film__year">2009</p>
+                </div>
+              </div>
+            </div>
+            <div class="film__more">
+              <h3 class="film__about">About</h3>
+              <p class="film__info hidden">
+                In 1950s, Paris, a young boy named Nicolas and his friends get
+                into all sorts of mischief, both intentional and unintentional.
+                Matters worsen when Nicolas, a single child, thinks his mother
+                is pregnant and a baby brother is forthcoming. A friend of
+                Nicolas's has a baby brother and thinks brotherhood is horrible.
+                Thanks to his friend's ideas, Nicolas believes this means his
+                parents do not love him anymore and will abandon him. He and his
+                pals embark on several schemes to raise 500 francs to have the
+                baby kidnapped and left in a jungle.
+              </p>
+            </div>
+          </li>
+          <li class="film movie">
+            <div class="film__box">
+              <img
+                class="film__pic"
+                src="img/pelican_man.jpg"
+                alt="Movie heroes"
+                width="300"
+                height="300"
+              />
+              <div class="film__container">
+                <h3 class="film__name">"Pelicanman"</h3>
+                <div class="wrapper wrapper--film">
+                  <p class="film__country">Finland</p>
+                  <p class="film__year">2004</p>
+                </div>
+              </div>
+            </div>
+            <div class="film__more">
+              <h3 class="film__about">About</h3>
+              <p class="film__info hidden">
+                A pelican magically changes his appearance into that of a young
+                man. He walks and acts somewhat oddly compared to real humans,
+                and at first he does not know much about humans, but he learns
+                fast. He rents an apartment and gets a job. The 10-year-old boy
+                Emil finds out that he is a pelican, and they become friends.
+                The pelican man is sent to a zoo, but Emil helps him escape.
+                Then the pelican man changes back to pelican appearance.
+              </p>
+            </div>
+          </li>
+          <li class="film movie">
+            <div class="film__box">
+              <img
+                class="film__pic"
+                src="img/pollyanna_movie.jpg"
+                alt="Movie heroes"
+                width="300"
+                height="300"
+              />
+              <div class="film__container">
+                <h3 class="film__name">"Pollyanna"</h3>
+                <div class="wrapper wrapper--film">
+                  <p class="film__country">Great Britain</p>
+                  <p class="film__year">2003</p>
+                </div>
+              </div>
+            </div>
+            <div class="film__more">
+              <h3 class="film__about">About</h3>
+              <p class="film__info hidden">
+                The title character is Pollyanna Whittier, an eleven-year-old
+                orphan who goes to live in the fictional town of Beldingsville,
+                Vermont, with her wealthy but stern and cold spinster Aunt
+                Polly, who does not want to take in Pollyanna but feels it is
+                her duty to her late sister. Pollyanna's philosophy of life
+                centers on what she calls "The Glad Game," an optimistic and
+                positive attitude she learned from her father. The game consists
+                of finding something to be glad about in every situation, no
+                matter how bleak it may be.
+              </p>
+            </div>
+          </li>
+          <li class="film cartoon">
+            <div class="film__box">
+              <img
+                class="film__pic"
+                src="img/ratatouille.jpg"
+                alt="Cartoon heroes"
+                width="300"
+                height="300"
+              />
+              <div class="film__container">
+                <h3 class="film__name">"Ratatouille"</h3>
+                <div class="wrapper wrapper--film">
+                  <p class="film__country">USA</p>
+                  <p class="film__year">2007</p>
+                </div>
+              </div>
+            </div>
+            <div class="film__more">
+              <h3 class="film__about">About</h3>
+              <p class="film__info hidden">
+                Remy is a highly intelligent and idealistic young rat with
+                unusually acute senses of taste and smell who dreams of becoming
+                a chef like his idol, the late Auguste Gusteau. However, the
+                rest of his rat colony are interested in food only for
+                sustenance. One day Remy accidentally was separated from the
+                clan. He winds up in the sewers and, encouraged by his own
+                imaginative interpretation of Gusteau, he eventually finds
+                himself above the kitchen of Gusteau's Restaurant in Paris.
+              </p>
+            </div>
+          </li>
+          <li class="film movie">
+            <div class="film__box">
+              <img
+                class="film__pic"
+                src="img/remi_movie.jpg"
+                alt="Movie heroes"
+                width="300"
+                height="300"
+              />
+              <div class="film__container">
+                <h3 class="film__name">"Remi, Nobody's Boy"</h3>
+                <div class="wrapper wrapper--film">
+                  <p class="film__country">France, Belgium</p>
+                  <p class="film__year">2018</p>
+                </div>
+              </div>
+            </div>
+            <div class="film__more">
+              <h3 class="film__about">About</h3>
+              <p class="film__info hidden">
+                Little orphan Remy at the age of 10 falls under the care of an
+                elderly itinerant artist and embarks on a fascinating journey
+                through 19th century France. Remi learns to make a living by
+                singing, befriends loyal animal companions, and reveals the
+                secret of his origins.
+              </p>
+            </div>
+          </li>
+          <li class="film movie">
+            <div class="film__box">
+              <img
+                class="film__pic"
+                src="img/secret_garden.jpg"
+                alt="Movie heroes"
+                width="300"
+                height="300"
+              />
+              <div class="film__container">
+                <h3 class="film__name">"The Secret Garden"</h3>
+                <div class="wrapper wrapper--film">
+                  <p class="film__country">Great Britain, USA</p>
+                  <p class="film__year">1993</p>
+                </div>
+              </div>
+            </div>
+            <div class="film__more">
+              <h3 class="film__about">About</h3>
+              <p class="film__info hidden">
+                In 1901, recently orphaned 10-year-old Mary Lennox is sent from
+                her home in British India to her uncle Lord Archibald Craven's
+                mansion, Misselthwaite Manor, in Yorkshire, England. When she is
+                finally introduced to her uncle, Mary is apprehensive, knowing
+                he was responsible for locking up the secret garden.
+              </p>
+            </div>
+          </li>
+          <li class="film cartoon">
+            <div class="film__box">
+              <img
+                class="film__pic"
+                src="img/sing.jpg"
+                alt="Cartoon heroes"
+                width="300"
+                height="300"
+              />
+              <div class="film__container">
+                <h3 class="film__name">"Sing"</h3>
+                <div class="wrapper wrapper--film">
+                  <p class="film__country">USA</p>
+                  <p class="film__year">2016</p>
+                </div>
+              </div>
+            </div>
+            <div class="film__more">
+              <h3 class="film__about">About</h3>
+              <p class="film__info hidden">
+                The film is about a group of anthropomorphic animals that enter
+                a singing competition, hosted by a koala who is trying to save
+                his theater. The film includes more than 60 songs from famous
+                artists and also has an original song by Stevie Wonder and
+                Ariana Grande called "Faith," which was nominated for a Golden
+                Globe.
+              </p>
+            </div>
+          </li>
+          <li class="film movie">
+            <div class="film__box">
+              <img
+                class="film__pic"
+                src="img/three_nuts.jpg"
+                alt="Movie heroes"
+                width="300"
+                height="300"
+              />
+              <div class="film__container">
+                <h3 class="film__name">"Three wishes of Cinderella"</h3>
+                <div class="wrapper wrapper--film">
+                  <p class="film__country">Czechoslovakia</p>
+                  <p class="film__year">1973</p>
+                </div>
+              </div>
+            </div>
+            <div class="film__more">
+              <h3 class="film__about">About</h3>
+              <p class="film__info hidden">
+                Cinderella's stepmother with all her might wants to marry her
+                daughter to the prince. But he doesn't want to get married at
+                all, he quarrels with his father and is going to leave the
+                palace, but at the last moment he sees a charming stranger in a
+                mask. The prince does not realize that this beautiful girl, the
+                clever shooter he met in the forest and the mischievous girl are
+                one and the same person. All these transformations were made
+                possible thanks to magic nuts, one of which contained a wedding
+                gift for Cinderella
+              </p>
+            </div>
+          </li>
+          <li class="film cartoon">
+            <div class="film__box">
+              <img
+                class="film__pic"
+                src="img/totoro_pic.jpg"
+                alt="Cartoon heroes"
+                width="300"
+                height="300"
+              />
+              <div class="film__container">
+                <h3 class="film__name">"My Neighbor Totoro"</h3>
+                <div class="wrapper wrapper--film">
+                  <p class="film__country">Japan</p>
+                  <p class="film__year">1988</p>
+                </div>
+              </div>
+            </div>
+            <div class="film__more">
+              <h3 class="film__about">About</h3>
+              <p class="film__info hidden">
+                After moving to the village, the two little sisters, the elder
+                (Satsuki) and the younger (Mei), become acquainted with the
+                forest spirit, which Mei calls "Totoro" (a distorted "troll").
+                Having made friends with the girls, he helps sisters to see
+                their mother, who is in the hospital.
+              </p>
+            </div>
+          </li>
+          <li class="film cartoon">
+            <div class="film__box">
+              <img
+                class="film__pic"
+                src="img/up_cartoon.jpg"
+                alt="Cartoon heroes"
+                width="300"
+                height="300"
+              />
+              <div class="film__container">
+                <h3 class="film__name">"Up"</h3>
+                <div class="wrapper wrapper--film">
+                  <p class="film__country">USA</p>
+                  <p class="film__year">2009</p>
+                </div>
+              </div>
+            </div>
+            <div class="film__more">
+              <h3 class="film__about">About</h3>
+              <p class="film__info hidden">
+                78-year-old grumbler Karl Fredriksen believes that life bypasses
+                him. To keep the promise he made to his wife, he decides to
+                fulfill his dream of a great adventure by tying thousands of
+                balloons to his home and flying into the wilds of South America.
+                Without flying even half a mile, the traveler discovers that he
+                inadvertently took with him an extremely talkative and
+                incorrigibly cheerful 8-year-old boy named Russell.
+              </p>
+            </div>
+          </li>
+          <li class="film cartoon">
+            <div class="film__box">
+              <img
+                class="film__pic"
+                src="img/walle.jpg"
+                alt="Cartoon heroes"
+                width="300"
+                height="300"
+              />
+              <div class="film__container">
+                <h3 class="film__name">"WALL-E"</h3>
+                <div class="wrapper wrapper--film">
+                  <p class="film__country">USA</p>
+                  <p class="film__year">2008</p>
+                </div>
+              </div>
+            </div>
+            <div class="film__more">
+              <h3 class="film__about">About</h3>
+              <p class="film__info hidden">
+                Robot WALL-E from year to year diligently works on the deserted
+                Earth, clearing our planet from the mountains of garbage left
+                behind by people who flew into space. He does not even imagine
+                that incredible events will happen very soon, thanks to which he
+                will meet friends, rise to the stars and even be able to change
+                for the better his former owners, who have completely forgotten
+                their native Earth.
+              </p>
+            </div>
+          </li>
+          <li class="film movie">
+            <div class="film__box">
+              <img
+                class="film__pic"
+                src="img/wings.jpg"
+                alt="The boy"
+                width="300"
+                height="300"
+              />
+              <div class="film__container">
+                <h3 class="film__name">"Spread Your Wings"</h3>
+                <div class="wrapper wrapper--film">
+                  <p class="film__country">France, Norway</p>
+                  <p class="film__year">2019</p>
+                </div>
+              </div>
+            </div>
+            <div class="film__more">
+              <h3 class="film__about">About</h3>
+              <p class="film__info hidden">
+                Christian is an eccentric ornithologist who has dedicated his
+                life to saving wild geese. For his son, a teenager with a
+                passion for video games, spending a vacation with his father in
+                the country is a longing and a nightmare. But to save the birds,
+                you need to unite with your father and make a dangerous trip on
+                a hang glider to Norway.
+              </p>
+            </div>
+          </li>
+          <li class="film movie">
+            <div class="film__box">
+              <img
+                class="film__pic"
+                src="img/wonder.jpg"
+                alt="Movie heroes"
+                width="300"
+                height="300"
+              />
+              <div class="film__container">
+                <h3 class="film__name">"Wonder"</h3>
+                <div class="wrapper wrapper--film">
+                  <p class="film__country">USA</p>
+                  <p class="film__year">2017</p>
+                </div>
+              </div>
+            </div>
+            <div class="film__more">
+              <h3 class="film__about">About</h3>
+              <p class="film__info hidden">
+                Little boy August Pullman is the same as other boys of his age -
+                he loves to go to his friends' birthdays and to play computer
+                games. On the other hand, he is not at all like other boys of
+                his age. Firstly, August never went to a regular school - from
+                the first grade, his mother taught him at home. Secondly, August
+                underwent 27 operations. Due to a very rare genetic error,
+                August has no face. And such a boy should go to school. For the
+                first time. To the ordinary children.
+              </p>
+            </div>
+          </li>
+
+          <li class="film movie">
+            <div class="film__box">
+              <img
+                class="film__pic"
+                src="img/lord_ring.jpg"
+                alt="Movie heroes"
+                width="300"
+                height="300"
+              />
+              <div class="film__container">
+                <h3 class="film__name">"The Lord of the Rings"</h3>
+                <div class="wrapper wrapper--film">
+                  <p class="film__country">USA, New Zealand</p>
+                  <p class="film__year">2001</p>
+                </div>
+              </div>
+            </div>
+            <div class="film__more">
+              <h3 class="film__about">About</h3>
+              <p class="film__info hidden">
+                The Lord of the Rings: The Fellowship of the Ring is a 2001 epic
+                fantasy adventure film, based on the 1954 novel The Fellowship
+                of the Ring, the first volume of J. R. R. Tolkien's The Lord of
+                the Rings. This is a chronicle of the Great War for the Ring, a
+                war that lasted more than one thousand years. The one who owned
+                the Ring received power over all living things, but was obliged
+                to serve evil.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <button class="back-to-top-button"></button>
+    </main>
+    <script src="js/menu.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/film-card.js"></script>
+    <script src="js/top-button.js"></script>
+  </body>
+</html>
